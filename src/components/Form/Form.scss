@@ -1,0 +1,14 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+  }
+}
