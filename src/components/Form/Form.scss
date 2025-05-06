@@ -1,14 +1,65 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex-orientation(column);
+  gap: 1rem;
+  margin: 2rem 0rem;
 
   &__label {
-    display: flex;
-    flex-direction: column;
+    @include flex-orientation(column);
+    color: $slate700;
+    font-size: 0.8rem;
+    // margin-bottom: 0.5rem;
   }
 
   &__type {
+    @include flex-orientation(column);
+  }
+  &__radio-label {
+    @include flex-orientation(row);
+  }
+}
+
+.amount {
+  &__container {
     display: flex;
-    flex-direction: column;
+    @include input-border;
+    margin-top: 0.5rem;
+  }
+  &__pound {
+    @include input-unit;
+    width: 8%;
+    padding: 4px 12px 3px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  &__input {
+    border: none;
+    width: 92%;
+
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+.year {
+  &__container {
+    display: flex;
+    @include input-border;
+    margin-top: 0.5rem;
+  }
+  &__unit {
+    @include input-unit;
+    width: 13%;
+    padding: 4px 12px 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &__input {
+    border: none;
+    width: 88%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 }

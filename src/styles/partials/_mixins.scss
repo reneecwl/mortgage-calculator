@@ -1,0 +1,24 @@
+@use "./typography";
+@use "./variables" as *;
+
+@mixin flex-orientation($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin input-border {
+  border: $slate700 solid 1px;
+  border-radius: 5px;
+}
+
+@mixin input-unit {
+  color: $slate700;
+  background-color: $slate100;
+  display: inline-block;
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}

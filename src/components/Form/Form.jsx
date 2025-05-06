@@ -8,37 +8,42 @@ export default function Form() {
     >
       <label className="form__label">
         Mortgage Amount
-        <input
-          type="number"
-          name="amount"
-          id="amount"
-          className="form__amount"
-          // onChange={(event) => {
-          //   setName(event.target.value);
-          // }}
-          // onBlur={() => {
-          //   setIsTouched(true);
-          // }}
-          // value={amount}
-        />{" "}
+        <div className="amount__container">
+          <span className="amount__pound">£</span>
+          <textarea
+            type="number"
+            name="amount"
+            id="amount"
+            className="amount__input"
+            // onChange={(event) => {
+            //   setName(event.target.value);
+            // }}
+            // onBlur={() => {
+            //   setIsTouched(true);
+            // }}
+            // value={amount}
+          />{" "}
+        </div>
       </label>
 
       <label className="form__label">
         Mortgage Term
-        <input
-          type="number"
-          name="year"
-          id="year"
-          className="form__year"
-
-          // onChange={(event) => {
-          //   setComment(event.target.value);
-          // }}
-          // onBlur={() => {
-          //   setIsTouched(true);
-          // }}
-          // value="year"
-        />{" "}
+        <div className="year__container">
+          <textarea
+            type="number"
+            name="year"
+            id="year"
+            className="year__input"
+            // onChange={(event) => {
+            //   setComment(event.target.value);
+            // }}
+            // onBlur={() => {
+            //   setIsTouched(true);
+            // }}
+            // value="year"
+          />
+          <span className="year__unit">years</span>
+        </div>
       </label>
 
       <label className="form__label">
@@ -48,6 +53,7 @@ export default function Form() {
           name="interest"
           id="interest"
           className="form__interest"
+          placeholder="%"
           step="0.01"
           // onChange={(event) => {
           //   setComment(event.target.value);
@@ -60,7 +66,7 @@ export default function Form() {
       </label>
 
       <label className="form__label">Mortgage Type</label>
-      <div>
+      <div className="form__type">
         <label className="form__radio-label">
           <input type="radio" name="type" id="repayment" value="repayment" className="form__type" />
           Repayment
