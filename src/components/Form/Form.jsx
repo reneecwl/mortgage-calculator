@@ -1,6 +1,12 @@
 import "./Form.scss";
+import { useState } from "react";
 
 export default function Form() {
+  const [amount, setAmount] = useState("");
+  const [year, setYear] = useState("");
+  const [interest, setInterest] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+
   return (
     <form
       className="form"
@@ -15,14 +21,14 @@ export default function Form() {
             name="amount"
             id="amount"
             className="amount__input"
-            // onChange={(event) => {
-            //   setName(event.target.value);
-            // }}
+            onChange={(event) => {
+              setAmount(event.target.value);
+            }}
+            value={amount}
             // onBlur={() => {
             //   setIsTouched(true);
             // }}
-            // value={amount}
-          />{" "}
+          />
         </div>
       </label>
 
@@ -34,13 +40,13 @@ export default function Form() {
             name="year"
             id="year"
             className="year__input"
-            // onChange={(event) => {
-            //   setComment(event.target.value);
-            // }}
+            onChange={(event) => {
+              setYear(event.target.value);
+            }}
+            value={year}
             // onBlur={() => {
             //   setIsTouched(true);
             // }}
-            // value="year"
           />
           <span className="year__unit">years</span>
         </div>
@@ -55,13 +61,13 @@ export default function Form() {
             id="interest"
             className="interest__input"
             step="0.01"
-            // onChange={(event) => {
-            //   setComment(event.target.value);
-            // }}
+            onChange={(event) => {
+              setInterest(event.target.value);
+            }}
+            value={interest}
             // onBlur={() => {
             //   setIsTouched(true);
             // }}
-            // value="year"
           />{" "}
           <span className="interest__unit">%</span>
         </div>{" "}
@@ -70,18 +76,38 @@ export default function Form() {
       <label className="form__label">Mortgage Type</label>
       <div className="form__type">
         <label className="form__radio-label">
-          <input type="radio" name="type" id="repayment" value="repayment" className="form__type" />
+          <input
+            type="radio"
+            name="type"
+            id="repayment"
+            value="Repayment"
+            checked={selectedOption === "Repayment"}
+            onChange={(event) => {
+              setSelectedOption(event.target.value);
+            }}
+            className="form__type"
+          />
           Repayment
         </label>
 
         <label className="form__radio-label">
-          <input type="radio" name="type" id="type" value="repayment" className="form__type" />
+          <input
+            type="radio"
+            name="type"
+            id="type"
+            value="Interest Only"
+            checked={selectedOption === "Interest Only"}
+            onChange={(event) => {
+              setSelectedOption(event.target.value);
+            }}
+            className="form__type"
+          />
           Interest Only
         </label>
       </div>
 
       <button type="submit" className="form__submit">
-        Calculate Repayments
+        Calculate {selectedOption}
       </button>
     </form>
   );
