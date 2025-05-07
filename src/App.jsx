@@ -1,5 +1,6 @@
 import "./styles/partials/_global.scss";
 import Form from "./components/Form/Form";
+import Result from "./components/Result/Result";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <h5 className="subtitle">Clear All</h5>
       </header>
       <Form />
+      <Result />
     </>
   );
 }
