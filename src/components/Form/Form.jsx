@@ -48,21 +48,23 @@ export default function Form() {
 
       <label className="form__label">
         Interest Rate
-        <textarea
-          type="number"
-          name="interest"
-          id="interest"
-          className="form__interest"
-          placeholder="%"
-          step="0.01"
-          // onChange={(event) => {
-          //   setComment(event.target.value);
-          // }}
-          // onBlur={() => {
-          //   setIsTouched(true);
-          // }}
-          // value="year"
-        ></textarea>{" "}
+        <div className="interest__container">
+          <textarea
+            type="number"
+            name="interest"
+            id="interest"
+            className="interest__input"
+            step="0.01"
+            // onChange={(event) => {
+            //   setComment(event.target.value);
+            // }}
+            // onBlur={() => {
+            //   setIsTouched(true);
+            // }}
+            // value="year"
+          />{" "}
+          <span className="interest__unit">%</span>
+        </div>{" "}
       </label>
 
       <label className="form__label">Mortgage Type</label>

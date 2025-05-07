@@ -63,3 +63,24 @@
     border-bottom-left-radius: 6px;
   }
 }
+
+.interest {
+  &__container {
+    display: flex;
+    @include input-border;
+    margin-top: 0.5rem;
+  }
+  &__unit {
+    @include input-unit;
+    width: 13%;
+    padding: 4px 12px 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &__input {
+    border: none;
+    width: 88%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}
