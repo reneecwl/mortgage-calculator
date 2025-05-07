@@ -7,11 +7,20 @@ export default function Form() {
   const [interest, setInterest] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
 
+  const handleFormSubmit = function (event) {
+    event.preventDefault();
+
+    const P = parseFloat(amount);
+    const r = parseFloat(interest) / 100 / 12;
+    const n = parseFloat(year) * 12;
+
+    const monthlyPayment = (P * r * (1 + r) ** n) / ((1 + r) ** n - 1);
+    console.log(monthlyPayment);
+    return monthlyPayment;
+  };
+
   return (
-    <form
-      className="form"
-      // onSubmit={handleFormSubmit}
-    >
+    <form className="form" onSubmit={handleFormSubmit}>
       <label className="form__label">
         Mortgage Amount
         <div className="amount__container">
