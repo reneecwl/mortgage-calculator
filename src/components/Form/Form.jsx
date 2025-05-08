@@ -19,7 +19,7 @@ export default function Form({
           Mortgage Amount
           <div className="amount__container">
             <span className="amount__pound">£</span>
-            <textarea
+            <input
               type="number"
               name="amount"
               id="amount"
@@ -38,7 +38,7 @@ export default function Form({
         <label className="form__label">
           Mortgage Term
           <div className="year__container">
-            <textarea
+            <input
               type="number"
               name="year"
               id="year"
@@ -58,7 +58,7 @@ export default function Form({
         <label className="form__label">
           Interest Rate
           <div className="interest__container">
-            <textarea
+            <input
               type="number"
               name="interest"
               id="interest"
