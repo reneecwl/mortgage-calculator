@@ -1,0 +1,6 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.results {
+  background-color: $slate900;
+}

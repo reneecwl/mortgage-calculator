@@ -1,4 +1,5 @@
 import "./Result.scss";
+import illustration from "../../assets/images/illustration-empty.svg";
 
 export default function Results({ monthlyPayment, year, interestPayment }) {
   return (
@@ -16,6 +17,7 @@ export default function Results({ monthlyPayment, year, interestPayment }) {
         </div>
       ) : (
         <div className="results__no-result">
+          <img src={illustration} alt="illustration" />
           <h3 className="results__header">Results shown here</h3>
           <p className="restuls__content">
             Complete the form and click “calculate repayments” to see what your monthly repayments would be.{" "}
