@@ -4,13 +4,13 @@
 .results {
   background-color: $slate900;
   color: white;
-  min-height: 60vh;
+  min-height: 52vh;
 
   &__no-result {
     @include flex-orientation(column);
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
   }
 
   &__image {
