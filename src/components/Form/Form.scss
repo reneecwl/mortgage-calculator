@@ -4,7 +4,7 @@
 .form {
   @include flex-orientation(column);
   gap: 1rem;
-  margin: 2rem 0rem;
+  margin: 1.5rem 0rem;
 
   &__label {
     @include flex-orientation(column);

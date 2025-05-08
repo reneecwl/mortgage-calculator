@@ -1,9 +1,10 @@
 @use "../src/styles/partials/mixins" as *;
 @use "../src/styles/partials/variables" as *;
 
-.subtitle {
+.clear {
+  display: inline-block;
   color: $slate700;
   font-size: 0.8rem;
-  margin-top: 0.3rem;
-  border-bottom: 0.2rem solid $slate700;
+  margin-top: 0.5rem;
+  border-bottom: 0.08rem solid $slate700;
 }

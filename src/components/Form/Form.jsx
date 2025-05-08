@@ -1,34 +1,17 @@
 import "./Form.scss";
 import { useState } from "react";
 
-export default function Form() {
-  const [amount, setAmount] = useState("");
-  const [year, setYear] = useState("");
-  const [interest, setInterest] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
-  const [monthlyPayment, setMonthlyPayment] = useState("");
-
-  const handleFormSubmit = function (event) {
-    event.preventDefault();
-
-    const P = parseFloat(amount);
-    const annualRate = parseFloat(interest);
-    const r = annualRate / 100 / 12;
-    const n = parseFloat(year) * 12;
-
-    const monthlyPayment = (P * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-    const totalInterest = monthlyPayment * n - P;
-    const monthlyInterest = totalInterest / n;
-
-    if (selectedOption === "Repayment") {
-      console.log("Repayment" + monthlyPayment);
-      setMonthlyPayment(monthlyPayment);
-    } else {
-      console.log("Interest Only" + monthlyInterest);
-      return monthlyInterest;
-    }
-  };
-
+export default function Form({
+  amount,
+  setAmount,
+  year,
+  setYear,
+  interest,
+  setInterest,
+  selectedOption,
+  setSelectedOption,
+  handleFormSubmit,
+}) {
   return (
     <>
       <form className="form" onSubmit={handleFormSubmit}>
@@ -130,27 +113,6 @@ export default function Form() {
           Calculate {selectedOption}
         </button>
       </form>
-      <div className="results">
-        {monthlyPayment ? (
-          <div className="payment">
-            <div className="payment__monthly">
-              Your Monthly repayments
-              <span className="payment__monthly-amount">{monthlyPayment}</span>
-            </div>
-            <div className="payment__total">
-              Total you'll repay over the term
-              <span className="payment__monthly-amount">{{ monthlyPayment } * { year } * 12}</span>
-            </div>
-          </div>
-        ) : (
-          <div className="results__no-result">
-            <h3 className="results__header">Results shown here</h3>
-            <p className="restuls__content">
-              Complete the form and click “calculate repayments” to see what your monthly repayments would be.{" "}
-            </p>
-          </div>
-        )}
-      </div>
     </>
   );
 }

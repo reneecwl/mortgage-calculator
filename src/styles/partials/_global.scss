@@ -17,7 +17,6 @@ body {
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
-  // background-color: $primary-light;
 }
 
 ul {
@@ -26,4 +25,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  color: $slate700;
+  background-color: white;
 }
