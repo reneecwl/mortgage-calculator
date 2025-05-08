@@ -1,6 +1,19 @@
 @use "../src/styles/partials/mixins" as *;
 @use "../src/styles/partials/variables" as *;
 
+.main {
+  @include flex-orientation(column);
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.form__container {
+  @include desktop {
+    width: 50%;
+  }
+}
 .clear {
   display: inline-block;
   color: $slate700;

@@ -42,26 +42,30 @@ function App() {
 
   return (
     <>
-      <header>
-        <h3 className="title"> Mortgage Calculator</h3>
-        <button type="button" className="clear" onClick={handleClear}>
-          Clear All
-        </button>
-      </header>
-      <Form
-        amount={amount}
-        setAmount={setAmount}
-        year={year}
-        setYear={setYear}
-        interest={interest}
-        setInterest={setInterest}
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
-        monthlyPayment={monthlyPayment}
-        setMonthlyPayment={setMonthlyPayment}
-        handleFormSubmit={handleFormSubmit}
-      />
-      <Result monthlyPayment={monthlyPayment} year={year} interestPayment={interestPayment} />
+      <main className="main">
+        <div className="form__container">
+          <div>
+            <h3 className="title"> Mortgage Calculator</h3>
+            <button type="button" className="clear" onClick={handleClear}>
+              Clear All
+            </button>
+          </div>
+          <Form
+            amount={amount}
+            setAmount={setAmount}
+            year={year}
+            setYear={setYear}
+            interest={interest}
+            setInterest={setInterest}
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+            monthlyPayment={monthlyPayment}
+            setMonthlyPayment={setMonthlyPayment}
+            handleFormSubmit={handleFormSubmit}
+          />
+        </div>
+        <Result monthlyPayment={monthlyPayment} year={year} interestPayment={interestPayment} />
+      </main>
     </>
   );
 }
