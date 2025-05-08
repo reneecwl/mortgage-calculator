@@ -32,6 +32,20 @@
     color: $slate900;
     font-weight: bold;
   }
+
+  &__submit {
+    color: $slate900;
+
+    height: 3.2rem;
+    border-radius: 1.5rem;
+    background-color: $lime;
+    width: 90%;
+    align-items: center;
+    margin: 1rem auto;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
 .amount {
