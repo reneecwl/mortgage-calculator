@@ -26,13 +26,17 @@
     display: flex;
     @include input-border;
     margin-top: 0.5rem;
+    height: 2.8rem;
   }
   &__pound {
     @include input-unit;
     width: 8%;
-    padding: 4px 12px 3px;
+    text-align: center;
+    padding-top: 0.6rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
   }
   &__input {
     border: none;
@@ -48,6 +52,7 @@
     display: flex;
     @include input-border;
     margin-top: 0.5rem;
+    height: 2.8rem;
   }
   &__unit {
     @include input-unit;
@@ -69,6 +74,7 @@
     display: flex;
     @include input-border;
     margin-top: 0.5rem;
+    height: 2.8rem;
   }
   &__unit {
     @include input-unit;
