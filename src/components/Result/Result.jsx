@@ -17,9 +17,9 @@ export default function Results({ monthlyPayment, year, interestPayment }) {
         </div>
       ) : (
         <div className="results__no-result">
-          <img src={illustration} alt="illustration" />
+          <img className="results__image" src={illustration} alt="illustration" />
           <h3 className="results__header">Results shown here</h3>
-          <p className="restuls__content">
+          <p className="results__content">
             Complete the form and click “calculate repayments” to see what your monthly repayments would be.{" "}
           </p>
         </div>

@@ -3,4 +3,29 @@
 
 .results {
   background-color: $slate900;
+  color: white;
+  min-height: 60vh;
+
+  &__no-result {
+    @include flex-orientation(column);
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+
+  &__image {
+    width: 10rem;
+    display: inline-block;
+  }
+
+  &__header {
+    color: white;
+    font-size: 1rem;
+  }
+
+  &__content {
+    color: $slate500;
+    text-align: center;
+    font-size: 0.87rem;
+  }
 }
