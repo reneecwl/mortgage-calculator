@@ -56,10 +56,13 @@
   }
   &__unit {
     @include input-unit;
-    width: 13%;
-    padding: 4px 12px 3px;
+    width: 15%;
+    text-align: center;
+    padding-top: 0.6rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-size: 1.05rem;
+    font-weight: bold;
   }
   &__input {
     border: none;
@@ -78,10 +81,13 @@
   }
   &__unit {
     @include input-unit;
-    width: 13%;
-    padding: 4px 12px 3px;
+    width: 12%;
+    text-align: center;
+    padding-top: 0.6rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-size: 1.05rem;
+    font-weight: bold;
   }
   &__input {
     border: none;
