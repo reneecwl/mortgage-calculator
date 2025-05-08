@@ -24,7 +24,7 @@ function App() {
     const totalInterest = monthlyPayment * n - P;
     const monthlyInterest = totalInterest / n;
 
-    if (selectedOption === "Repayment") {
+    if (selectedOption === "Repayments") {
       console.log("Repayment" + monthlyPayment);
       setMonthlyPayment(monthlyPayment);
     } else {

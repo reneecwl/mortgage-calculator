@@ -35,14 +35,16 @@
 
   &__submit {
     color: $slate900;
-
+    display: flex;
+    align-items: center;
     height: 3.2rem;
     border-radius: 1.5rem;
     background-color: $lime;
     width: 90%;
     align-items: center;
     margin: 1rem auto;
-
+    justify-content: center;
+    gap: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
   }

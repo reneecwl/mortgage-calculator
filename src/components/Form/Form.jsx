@@ -1,5 +1,6 @@
 import "./Form.scss";
 import { useState } from "react";
+import calculator from "../../assets/images/icon-calculator.svg";
 
 export default function Form({
   amount,
@@ -83,14 +84,14 @@ export default function Form({
               type="radio"
               name="type"
               id="repayment"
-              value="Repayment"
-              checked={selectedOption === "Repayment"}
+              value="Repayments"
+              checked={selectedOption === "Repayments"}
               onChange={(event) => {
                 setSelectedOption(event.target.value);
               }}
               className="form__type"
             />
-            Repayment
+            Repayments
           </label>
 
           <label className="form__radio-label">
@@ -110,6 +111,7 @@ export default function Form({
         </div>
 
         <button type="submit" className="form__submit">
+          <img className="submit__icon" src={calculator} alt="calculator" />
           Calculate {selectedOption}
         </button>
       </form>
