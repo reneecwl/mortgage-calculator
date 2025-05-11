@@ -80,37 +80,44 @@ export default function Form({
           </div>{" "}
         </label>
 
-        <label className="form__label">Mortgage Type</label>
-        <div className="form__type">
-          <label className="form__radio-label">
+        <div className="form__type-container">
+          <h3 className="form__label">Mortgage Type</h3>
+
+          <div className={`form__type ${selectedOption === "Repayments" ? "form__type--active" : ""}`}>
             <input
               type="radio"
               name="type"
-              id="repayment"
+              id="repayments"
               value="Repayments"
               checked={selectedOption === "Repayments"}
               onChange={(event) => {
+                console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
               }}
-              className="form__type"
+              className="form__radio"
             />
-            Repayments
-          </label>
+            <label htmlFor="repayments" className="form__radio-label">
+              Repayments
+            </label>
+          </div>
 
-          <label className="form__radio-label">
+          <div className={`form__type ${selectedOption === "Interest Only" ? "form__type--active" : ""}`}>
             <input
               type="radio"
               name="type"
-              id="type"
+              id="interest-only"
               value="Interest Only"
               checked={selectedOption === "Interest Only"}
               onChange={(event) => {
+                console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
               }}
-              className="form__type"
+              className="form__radio"
             />
-            Interest Only
-          </label>
+            <label htmlFor="interest-only" className="form__radio-label">
+              Interest Only
+            </label>
+          </div>
         </div>
 
         <button type="submit" className="form__submit">
