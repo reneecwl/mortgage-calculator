@@ -14,6 +14,7 @@ export default function Form({
   handleFormSubmit,
 }) {
   const [value, setValue] = useState("");
+
   return (
     <>
       <form className="form" onSubmit={handleFormSubmit}>

@@ -13,6 +13,15 @@
   &:hover {
     border: 1.5px solid $slate700;
   }
+
+  &:focus-within {
+    border: 1.5px solid $lime;
+
+    span {
+      color: $slate900;
+      background-color: $lime;
+    }
+  }
 }
 
 @mixin input-unit {
@@ -28,6 +37,10 @@
   font-size: 1rem;
   padding-left: 1rem;
   cursor: pointer !important;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 @mixin desktop {

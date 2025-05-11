@@ -104,6 +104,10 @@
     margin-top: 0.5rem;
     height: 2.8rem;
     color: $slate900;
+
+    &:focus-within {
+      border: 1.5px solid $lime;
+    }
   }
   &__pound {
     @include input-unit;
