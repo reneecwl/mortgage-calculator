@@ -57,6 +57,10 @@
     margin-top: 0.5rem;
     height: 2.8rem;
     color: $slate900;
+
+    // &:hover {
+    //   border: 2px solid $slate700;
+    // }
   }
   &__pound {
     @include input-unit;
@@ -86,7 +90,7 @@
   }
   &__unit {
     @include input-unit;
-    width: 15%;
+    width: 19%;
     text-align: center;
     padding-top: 0.6rem;
     border-top-right-radius: 5px;
@@ -99,6 +103,7 @@
     width: 88%;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    @include input-tab;
   }
 }
 
@@ -124,5 +129,6 @@
     width: 88%;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    @include input-tab;
   }
 }

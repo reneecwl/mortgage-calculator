@@ -9,6 +9,10 @@
 @mixin input-border {
   border: $slate700 solid 1px;
   border-radius: 5px;
+
+  &:hover {
+    border: 2px solid $slate700;
+  }
 }
 
 @mixin input-unit {
@@ -23,6 +27,7 @@
   font-weight: bold;
   font-size: 1rem;
   padding-left: 1rem;
+  cursor: pointer !important;
 }
 
 @mixin desktop {
