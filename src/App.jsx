@@ -15,7 +15,7 @@ function App() {
   const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    const P = parseFloat(amount);
+    const P = parseFloat(amount.replace(/,/g, ""), 10);
     const annualRate = parseFloat(interest);
     const r = annualRate / 100 / 12;
     const n = parseFloat(year) * 12;

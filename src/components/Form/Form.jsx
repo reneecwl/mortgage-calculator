@@ -13,6 +13,7 @@ export default function Form({
   setSelectedOption,
   handleFormSubmit,
 }) {
+  const [value, setValue] = useState("");
   return (
     <>
       <form className="form" onSubmit={handleFormSubmit}>
@@ -21,12 +22,14 @@ export default function Form({
           <div className="amount__container">
             <span className="amount__pound">£</span>
             <input
-              type="number"
+              type="text"
               name="amount"
               id="amount"
               className="amount__input"
               onChange={(event) => {
-                setAmount(event.target.value);
+                const rawValue = event.target.value.replace(/,/g, "").replace(/\D/g, "");
+                const formatted = rawValue ? Number(rawValue).toLocaleString() : "";
+                setAmount(formatted);
               }}
               value={amount}
               // onBlur={() => {
