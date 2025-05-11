@@ -56,6 +56,7 @@
     @include input-border;
     margin-top: 0.5rem;
     height: 2.8rem;
+    color: $slate900;
   }
   &__pound {
     @include input-unit;
@@ -64,13 +65,13 @@
     padding-top: 0.6rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
   }
   &__input {
+    @include input-tab;
     border: none;
     width: 92%;
-
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
   }

@@ -17,6 +17,14 @@
   display: inline-block;
 }
 
+@mixin input-tab {
+  color: $slate900;
+  font-family: "PlusJakartaSans";
+  font-weight: bold;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
 @mixin desktop {
   @media (min-width: $desktop-breakpoint) {
     @content;
