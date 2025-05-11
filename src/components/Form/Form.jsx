@@ -115,7 +115,7 @@ export default function Form({
 
         <button type="submit" className="form__submit">
           <img className="submit__icon" src={calculator} alt="calculator" />
-          Calculate {selectedOption}
+          Calculate Repayments
         </button>
       </form>
     </>
