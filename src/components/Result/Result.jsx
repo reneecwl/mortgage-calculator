@@ -14,11 +14,14 @@ export default function Results({ monthlyPayment, year, interestPayment }) {
           <div className="payment__box">
             <div className="payment__monthly">
               Your Monthly repayments
-              <span className="payment__monthly-amount">£{monthlyPayment}</span>
+              <span className="payment__monthly-amount">£{monthlyPayment.toLocaleString()}</span>
             </div>
             <div className="payment__total">
               Total you'll repay over the term
-              <span className="payment__total-amount">£{{ monthlyPayment } * { year } * 12}</span>
+              <span className="payment__total-amount">
+                {" "}
+                £{Number((monthlyPayment * year * 12).toFixed(2)).toLocaleString()}
+              </span>
             </div>
           </div>
         </div>
