@@ -30,3 +30,13 @@
     width: 80%;
   }
 }
+
+.payment {
+  &__monthly {
+    color: white;
+  }
+
+  &__monthly-amount {
+    color: white;
+  }
+}

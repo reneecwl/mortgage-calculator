@@ -50,6 +50,7 @@ function App() {
               Clear All
             </button>
           </div>
+
           <Form
             amount={amount}
             setAmount={setAmount}
