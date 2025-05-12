@@ -6,8 +6,8 @@ export default function Results({ monthlyPayment, year, interestPayment }) {
     <div className="results">
       {monthlyPayment || interestPayment ? (
         <>
-          <h3 className="results__header">Your results</h3>
-          <p className="results__content">
+          <h3 className="payment__header">Your results</h3>
+          <p className="payment__content">
             Your results are shown below based on the information you provided. To adjust the results, edit the form and
             click “calculate repayments” again. Your monthly repayments Total you'll repay over the term
           </p>
