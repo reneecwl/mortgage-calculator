@@ -33,15 +33,52 @@
 }
 
 .payment {
+  @include flex-orientation(column);
+  padding: 1.6rem 1.5rem;
+  gap: 1rem;
+
   &__header {
     color: white;
     font-size: 1rem;
-  }
-  &__monthly {
-    color: white;
+    font-weight: 500;
   }
 
-  &__monthly-amount {
-    color: white;
+  &__content {
+    color: $slate500;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__box {
+    @include flex-orientation(column);
+    border-top: 3px solid $lime;
+    background-color: #0e2431;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    // gap: 1rem;
+  }
+
+  &__monthly {
+    color: $slate700;
+    font-size: 0.8rem;
+    @include flex-orientation(column);
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+
+    &-amount {
+      color: $lime;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__total {
+    @extend .payment__monthly;
+    padding-top: 0.8rem;
+    border-top: $slate300 solid 1px;
+
+    &-amount {
+      color: white;
+      font-size: 1.1rem;
+    }
   }
 }
