@@ -1,29 +1,33 @@
 import "./Result.scss";
 import illustration from "../../assets/images/illustration-empty.svg";
+import PaymentBox from "../PaymentBox/PaymentBox";
 
 export default function Results({ monthlyPayment, year, interestPayment }) {
+  const hasResults = monthlyPayment || interestPayment;
+
   return (
     <div className="results">
-      {monthlyPayment || interestPayment ? (
+      {hasResults ? (
         <div className="payment">
           <h3 className="payment__header">Your results</h3>
           <p className="payment__content">
             Your results are shown below based on the information you provided. To adjust the results, edit the form and
             click “calculate repayments” again.
           </p>
-          <div className="payment__box">
-            <div className="payment__monthly">
-              Your Monthly repayments
-              <span className="payment__monthly-amount">£{parseFloat(monthlyPayment.toFixed(2)).toLocaleString()}</span>
-            </div>
-            <div className="payment__total">
-              Total you'll repay over the term
-              <span className="payment__total-amount">
-                {" "}
-                £{Number((monthlyPayment * year * 12).toFixed(2)).toLocaleString()}
-              </span>
-            </div>
-          </div>
+
+          {monthlyPayment ? (
+            <PaymentBox
+              label="Your Monthly repayments"
+              monthlyAmount={monthlyPayment}
+              totalAmount={monthlyPayment * year * 12}
+            />
+          ) : (
+            <PaymentBox
+              label="Your Monthly interest"
+              monthlyAmount={interestPayment}
+              totalAmount={interestPayment * year * 12}
+            />
+          )}
         </div>
       ) : (
         <div className="results__no-result">

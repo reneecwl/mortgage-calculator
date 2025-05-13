@@ -20,7 +20,8 @@ function App() {
 
   const handleFormSubmit = function (event) {
     event.preventDefault();
-
+    setMonthlyPayment("");
+    setInterestPayment("");
     const P = parseFloat(amount.replace(/,/g, ""), 10);
     const annualRate = parseFloat(interest);
     const r = annualRate / 100 / 12;
@@ -43,6 +44,8 @@ function App() {
     setYear("");
     setInterest("");
     setSelectedOption("");
+    setMonthlyPayment("");
+    setInterestPayment("");
     setIsTouched({ amount: false, year: false, interest: false });
   };
 
