@@ -15,6 +15,7 @@ function App() {
     amount: false,
     year: false,
     interest: false,
+    mortageType: false,
   });
 
   const handleFormSubmit = function (event) {

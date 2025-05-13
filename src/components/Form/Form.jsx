@@ -56,6 +56,7 @@ export default function Form({
                   setIsTouched({ ...isTouched, year: true });
                 }}
               />{" "}
+              <span className={`year__unit ${isTouched.year && !year ? "year__unit-error" : ""}`}>year</span>
             </div>
             {isTouched.year && !year && <span className="error__message">This field is required</span>}
           </label>
@@ -86,7 +87,7 @@ export default function Form({
             {isTouched.interest && !interest && <span className="error__message">This field is required</span>}
           </label>
         </div>
-        <div className="form__type-container">
+        <div className="form__type-container" onBlur={() => setIsTouched({ ...isTouched, mortgageType: true })}>
           <h3 className="form__label-type">Mortgage Type</h3>
 
           <div className={`form__type ${selectedOption === "Repayments" ? "form__type--active" : ""}`}>
@@ -99,6 +100,7 @@ export default function Form({
               onChange={(event) => {
                 console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
+                setIsTouched({ ...isTouched, mortgageType: true });
               }}
               className="form__radio"
             />
@@ -116,6 +118,7 @@ export default function Form({
               onChange={(event) => {
                 console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
+                setIsTouched({ ...isTouched, mortgageType: true });
               }}
               checked={selectedOption === "Interest Only"}
               className="form__radio"
@@ -124,6 +127,7 @@ export default function Form({
               Interest Only
             </label>
           </div>
+          {isTouched.mortgageType && !selectedOption && <span className="error__message">This field is required</span>}
         </div>
 
         <button type="submit" className="form__submit">
