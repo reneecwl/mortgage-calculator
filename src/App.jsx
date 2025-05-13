@@ -53,30 +53,24 @@ function App() {
     <main className="main">
       <div className="main__container">
         {/* <div className="content__container"> */}
-        <div className="form__container">
-          <div className="header__container">
-            <h3 className="title"> Mortgage Calculator</h3>
-            <button type="button" className="clear" onClick={handleClear}>
-              Clear All
-            </button>
-          </div>
 
-          <Form
-            amount={amount}
-            setAmount={setAmount}
-            year={year}
-            setYear={setYear}
-            interest={interest}
-            setInterest={setInterest}
-            selectedOption={selectedOption}
-            setSelectedOption={setSelectedOption}
-            monthlyPayment={monthlyPayment}
-            setMonthlyPayment={setMonthlyPayment}
-            handleFormSubmit={handleFormSubmit}
-            isTouched={isTouched}
-            setIsTouched={setIsTouched}
-          />
-        </div>
+        <Form
+          amount={amount}
+          setAmount={setAmount}
+          year={year}
+          setYear={setYear}
+          interest={interest}
+          setInterest={setInterest}
+          selectedOption={selectedOption}
+          setSelectedOption={setSelectedOption}
+          monthlyPayment={monthlyPayment}
+          setMonthlyPayment={setMonthlyPayment}
+          handleFormSubmit={handleFormSubmit}
+          isTouched={isTouched}
+          setIsTouched={setIsTouched}
+          handleClear={handleClear}
+        />
+
         <Result monthlyPayment={monthlyPayment} year={year} interestPayment={interestPayment} />
         {/* </div>{" "} */}
       </div>

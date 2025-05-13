@@ -22,30 +22,3 @@
     }
   }
 }
-
-.form__container {
-  padding: 1.6rem 1.5rem;
-  min-height: 60vh;
-  @include flex-orientation(column);
-  justify-content: space-between;
-  padding-bottom: 0rem;
-
-  @include desktop {
-    width: 50%;
-    background-color: white;
-    border-radius: 2.5rem;
-    padding: 5.5rem 2rem;
-  }
-}
-
-.header__container {
-  margin-bottom: 1.8rem;
-}
-.clear {
-  display: inline-block;
-  color: $slate700;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  border-bottom: 0.08rem solid $slate700;
-  cursor: pointer;
-}
