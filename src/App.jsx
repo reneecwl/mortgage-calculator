@@ -31,7 +31,6 @@ function App() {
     const monthlyInterest = totalInterest / n;
 
     if (selectedOption === "Repayments") {
-      console.log("Repayment" + monthlyPayment);
       setMonthlyPayment(monthlyPayment);
     } else {
       console.log("Interest Only" + monthlyInterest);

@@ -87,7 +87,13 @@ export default function Form({
             {isTouched.interest && !interest && <span className="error__message">This field is required</span>}
           </label>
         </div>
-        <div className="form__type-container" onBlur={() => setIsTouched({ ...isTouched, mortgageType: true })}>
+        <div
+          className="form__type-container"
+          tabIndex={0}
+          onBlur={() => {
+            setIsTouched((prev) => ({ ...prev, mortgageType: true }));
+          }}
+        >
           <h3 className="form__label-type">Mortgage Type</h3>
 
           <div className={`form__type ${selectedOption === "Repayments" ? "form__type--active" : ""}`}>
@@ -98,7 +104,6 @@ export default function Form({
               value="Repayments"
               checked={selectedOption === "Repayments"}
               onChange={(event) => {
-                console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
                 setIsTouched({ ...isTouched, mortgageType: true });
               }}
@@ -116,7 +121,6 @@ export default function Form({
               id="interest-only"
               value="Interest Only"
               onChange={(event) => {
-                console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
                 setIsTouched({ ...isTouched, mortgageType: true });
               }}
