@@ -1,5 +1,4 @@
 import "./Form.scss";
-import { useState } from "react";
 import calculator from "../../assets/images/icon-calculator.svg";
 
 export default function Form({
@@ -12,16 +11,16 @@ export default function Form({
   selectedOption,
   setSelectedOption,
   handleFormSubmit,
+  isTouched,
+  setIsTouched,
 }) {
-  const [value, setValue] = useState("");
-
   return (
     <>
       <form className="form" onSubmit={handleFormSubmit}>
         <label className="form__label">
           Mortgage Amount
-          <div className="amount__container">
-            <span className="amount__pound">£</span>
+          <div className={`amount__container ${isTouched.amount && !amount ? "amount__container-error" : ""}`}>
+            <span className={`amount__pound ${isTouched.amount && !amount ? "amount__pound-error" : ""}`}>£</span>
             <input
               type="text"
               name="amount"
@@ -33,16 +32,16 @@ export default function Form({
                 setAmount(formatted);
               }}
               value={amount}
-              // onBlur={() => {
-              //   setIsTouched(true);
-              // }}
+              onBlur={() => {
+                setIsTouched({ ...isTouched, amount: true });
+              }}
             />
           </div>
         </label>
         <div className="form__middle-container">
           <label className="form__label form__label-half">
             Mortgage Term
-            <div className="year__container">
+            <div className={`year__container ${isTouched.year && !year ? "year__container-error" : ""}`}>
               <input
                 type="number"
                 name="year"
@@ -52,17 +51,19 @@ export default function Form({
                   setYear(event.target.value);
                 }}
                 value={year}
-                // onBlur={() => {
-                //   setIsTouched(true);
-                // }}
+                onBlur={() => {
+                  setIsTouched({ ...isTouched, year: true });
+                }}
               />
-              <span className="year__unit">years</span>
+              <span className={`year__unit ${isTouched.year && !year ? "year__unit-error" : ""}`}>years</span>
             </div>
           </label>
 
           <label className="form__label form__label-half">
             Interest Rate
-            <div className="interest__container">
+            <div
+              className={`interest__container ${isTouched.interest && !interest ? "interest__container-error" : ""}`}
+            >
               <input
                 type="number"
                 name="interest"
@@ -73,16 +74,18 @@ export default function Form({
                   setInterest(event.target.value);
                 }}
                 value={interest}
-                // onBlur={() => {
-                //   setIsTouched(true);
-                // }}
+                onBlur={() => {
+                  setIsTouched({ ...isTouched, interest: true });
+                }}
               />{" "}
-              <span className="interest__unit">%</span>
+              <span className={`interest__unit ${isTouched.interest && !interest ? "interest__unit-error" : ""}`}>
+                %
+              </span>
             </div>{" "}
           </label>
         </div>
         <div className="form__type-container">
-          <h3 className="form__label">Mortgage Type</h3>
+          <h3 className="form__label-type">Mortgage Type</h3>
 
           <div className={`form__type ${selectedOption === "Repayments" ? "form__type--active" : ""}`}>
             <input

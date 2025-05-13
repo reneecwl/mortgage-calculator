@@ -11,6 +11,11 @@ function App() {
   const [selectedOption, setSelectedOption] = useState("");
   const [monthlyPayment, setMonthlyPayment] = useState("");
   const [interestPayment, setInterestPayment] = useState("");
+  const [isTouched, setIsTouched] = useState({
+    amount: false,
+    year: false,
+    interest: false,
+  });
 
   const handleFormSubmit = function (event) {
     event.preventDefault();
@@ -38,6 +43,7 @@ function App() {
     setYear("");
     setInterest("");
     setSelectedOption("");
+    setIsTouched({ amount: false, year: false, interest: false });
   };
 
   return (
@@ -45,7 +51,7 @@ function App() {
       <div className="main__container">
         {/* <div className="content__container"> */}
         <div className="form__container">
-          <div>
+          <div className="header__container">
             <h3 className="title"> Mortgage Calculator</h3>
             <button type="button" className="clear" onClick={handleClear}>
               Clear All
@@ -64,6 +70,8 @@ function App() {
             monthlyPayment={monthlyPayment}
             setMonthlyPayment={setMonthlyPayment}
             handleFormSubmit={handleFormSubmit}
+            isTouched={isTouched}
+            setIsTouched={setIsTouched}
           />
         </div>
         <Result monthlyPayment={monthlyPayment} year={year} interestPayment={interestPayment} />

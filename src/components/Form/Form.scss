@@ -3,8 +3,7 @@
 
 .form {
   @include flex-orientation(column);
-  gap: 1rem;
-  margin: 1.5rem 0rem;
+  justify-content: space-between;
 
   @include desktop {
     margin-bottom: 0rem;
@@ -15,11 +14,13 @@
     color: $slate700;
     font-size: 0.8rem;
     font-weight: 500;
+    gap: 0.1rem;
+    margin-bottom: 1.2rem;
   }
 
   &__middle-container {
     @include flex-orientation(column);
-    gap: 1rem;
+
     @include desktop {
       @include flex-orientation(row);
       justify-content: space-between;
@@ -37,6 +38,19 @@
     &:checked {
       background-color: rgba($lime, 0.2);
     }
+
+    &-error {
+      background-color: $red;
+    }
+  }
+
+  &__label-type {
+    @include flex-orientation(column);
+    color: $slate700;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 0.1rem;
+    margin-bottom: 0.2rem;
   }
   &__type {
     display: flex;
@@ -110,9 +124,9 @@
     height: 3.2rem;
     border-radius: 1.5rem;
     background-color: $lime;
-    width: 90%;
+    width: 100%;
     align-items: center;
-    margin: 1rem auto;
+    margin: 1.8rem auto;
     justify-content: center;
     gap: 1rem;
     font-size: 1.2rem;
@@ -139,6 +153,7 @@
     @include desktop {
       width: 50%;
       margin-left: 0px;
+      font-size: 0.9rem;
     }
   }
 
@@ -156,6 +171,10 @@
     margin-top: 0.5rem;
     height: 2.8rem;
     color: $slate900;
+
+    &-error {
+      border: $red 1px solid;
+    }
   }
   &__pound {
     @include input-unit;
@@ -166,6 +185,12 @@
     border-bottom-left-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
+    font-size: 0.9rem;
+
+    &-error {
+      background-color: $red;
+      color: white;
+    }
   }
   &__input {
     @include input-tab;
@@ -182,6 +207,10 @@
     @include input-border;
     margin-top: 0.5rem;
     height: 2.8rem;
+
+    &-error {
+      border: $red 1px solid;
+    }
   }
   &__unit {
     @include input-unit;
@@ -193,8 +222,14 @@
     font-size: 1.05rem;
     font-weight: bold;
 
+    &-error {
+      background-color: $red;
+      color: white;
+    }
+
     @include desktop {
       width: 25%;
+      font-size: 0.9rem;
     }
   }
   &__input {
@@ -212,6 +247,10 @@
     @include input-border;
     margin-top: 0.5rem;
     height: 2.8rem;
+
+    &-error {
+      border: $red 1px solid;
+    }
   }
   &__unit {
     @include input-unit;
@@ -223,8 +262,14 @@
     font-size: 1.05rem;
     font-weight: bold;
 
+    &-error {
+      background-color: $red;
+      color: white;
+    }
+
     @include desktop {
       width: 17%;
+      font-size: 0.9rem;
     }
   }
   &__input {

@@ -11,6 +11,7 @@
   }
   &__container {
     @include flex-orientation(column);
+    min-height: 35vh;
 
     @include desktop {
       flex-direction: row;
@@ -24,12 +25,21 @@
 
 .form__container {
   padding: 1.6rem 1.5rem;
+  min-height: 60vh;
+  @include flex-orientation(column);
+  justify-content: space-between;
+  padding-bottom: 0rem;
+
   @include desktop {
     width: 50%;
     background-color: white;
     border-radius: 2.5rem;
-    padding: 2.5rem 2rem;
+    padding: 5.5rem 2rem;
   }
+}
+
+.header__container {
+  margin-bottom: 1.8rem;
 }
 .clear {
   display: inline-block;
