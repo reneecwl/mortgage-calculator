@@ -1,29 +1,19 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
 .payment {
-  @include flex-orientation(column);
-  padding: 1.6rem 1.5rem;
-  gap: 1rem;
-
-  &__header {
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  &__content {
-    color: $slate500;
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
-  }
-
   &__box {
     @include flex-orientation(column);
     border-top: 3px solid $lime;
     background-color: #0e2431;
     border-radius: 10px;
     padding: 1rem 1rem;
-    // gap: 1rem;
+
+    @include desktop {
+      min-height: 30vh;
+      justify-content: space-evenly;
+      padding-top: 26px;
+    }
   }
 
   &__monthly {
@@ -33,9 +23,17 @@
     gap: 0.3rem;
     margin-bottom: 0.8rem;
 
+    @include desktop {
+      font-size: 1.1rem;
+    }
     &-amount {
       color: $lime;
       font-size: 1.5rem;
+
+      @include desktop {
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -44,9 +42,17 @@
     padding-top: 0.8rem;
     border-top: $slate300 solid 1px;
 
+    @include desktop {
+      font-size: 1rem;
+      padding-top: 1.2rem;
+    }
     &-amount {
       color: white;
       font-size: 1.1rem;
+
+      @include desktop {
+        font-size: 2rem;
+      }
     }
   }
 }
