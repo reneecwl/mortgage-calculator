@@ -36,7 +36,8 @@ export default function Form({
                 setIsTouched({ ...isTouched, amount: true });
               }}
             />
-          </div>
+          </div>{" "}
+          {isTouched.amount && !amount && <span className="error__message">This field is required</span>}
         </label>
         <div className="form__middle-container">
           <label className="form__label form__label-half">
@@ -54,9 +55,9 @@ export default function Form({
                 onBlur={() => {
                   setIsTouched({ ...isTouched, year: true });
                 }}
-              />
-              <span className={`year__unit ${isTouched.year && !year ? "year__unit-error" : ""}`}>years</span>
+              />{" "}
             </div>
+            {isTouched.year && !year && <span className="error__message">This field is required</span>}
           </label>
 
           <label className="form__label form__label-half">
@@ -81,7 +82,8 @@ export default function Form({
               <span className={`interest__unit ${isTouched.interest && !interest ? "interest__unit-error" : ""}`}>
                 %
               </span>
-            </div>{" "}
+            </div>
+            {isTouched.interest && !interest && <span className="error__message">This field is required</span>}
           </label>
         </div>
         <div className="form__type-container">

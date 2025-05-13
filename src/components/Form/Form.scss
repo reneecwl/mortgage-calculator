@@ -280,3 +280,8 @@
     @include input-tab;
   }
 }
+
+.error__message {
+  color: $red;
+  margin-top: 0.5rem;
+}
