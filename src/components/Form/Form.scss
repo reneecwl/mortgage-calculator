@@ -3,6 +3,11 @@
 
 .header__container {
   margin-bottom: 1.8rem;
+
+  @include desktop {
+    @include flex-orientation(row);
+    justify-content: space-between;
+  }
 }
 .clear {
   display: inline-block;
