@@ -76,6 +76,7 @@ A responsive mortgage calculator built with React and SCSS. Enter your mortgage 
 ---
 
 ## 📸 Screenshots
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/30d90fd6-03dc-4b7d-8ddc-ca6137361906" />
 
 ---
 
