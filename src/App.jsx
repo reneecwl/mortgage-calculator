@@ -26,7 +26,7 @@ function App() {
 
     if (selectedOption === "Repayments") {
       console.log("Repayment" + monthlyPayment);
-      setMonthlyPayment(parseFloat(monthlyPayment.toFixed(2)));
+      setMonthlyPayment(monthlyPayment);
     } else {
       console.log("Interest Only" + monthlyInterest);
       setInterestPayment(parseFloat(monthlyInterest.toFixed(2)));

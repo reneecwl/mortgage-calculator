@@ -14,7 +14,7 @@ export default function Results({ monthlyPayment, year, interestPayment }) {
           <div className="payment__box">
             <div className="payment__monthly">
               Your Monthly repayments
-              <span className="payment__monthly-amount">£{monthlyPayment.toLocaleString()}</span>
+              <span className="payment__monthly-amount">£{parseFloat(monthlyPayment.toFixed(2)).toLocaleString()}</span>
             </div>
             <div className="payment__total">
               Total you'll repay over the term
