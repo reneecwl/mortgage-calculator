@@ -4,8 +4,17 @@
 .results {
   background-color: $slate900;
   color: white;
-  min-height: 52vh;
+  min-height: 40vh;
   @include flex-orientation(column);
+  justify-content: center;
+
+  @include desktop {
+    border-radius: 2.5rem;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 6rem;
+
+    width: 50%;
+  }
 
   &__no-result {
     @include flex-orientation(column);
@@ -17,11 +26,19 @@
   &__image {
     width: 10rem;
     display: inline-block;
+
+    @include desktop {
+      width: 14rem;
+    }
   }
 
   &__header {
     color: white;
     font-size: 1rem;
+
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 
   &__content {
@@ -29,6 +46,10 @@
     text-align: center;
     font-size: 0.87rem;
     width: 80%;
+
+    @include desktop {
+      font-size: 1.1rem;
+    }
   }
 }
 

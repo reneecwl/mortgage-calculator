@@ -2,10 +2,21 @@
 @use "../src/styles/partials/variables" as *;
 
 .main {
-  @include flex-orientation(column);
-
   @include desktop {
-    flex-direction: row;
+    background-color: $slate300;
+    display: flex;
+    align-items: center;
+  }
+  &__container {
+    @include flex-orientation(column);
+
+    @include desktop {
+      flex-direction: row;
+      background-color: white;
+      width: 70%;
+      margin: auto;
+      border-radius: 5rem;
+    }
   }
 }
 
@@ -13,6 +24,9 @@
   padding: 1.6rem 1.5rem;
   @include desktop {
     width: 50%;
+    background-color: white;
+    border-radius: 2.5rem;
+    padding: 2.5rem 2rem;
   }
 }
 .clear {

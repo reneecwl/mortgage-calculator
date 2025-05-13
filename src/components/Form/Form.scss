@@ -6,12 +6,15 @@
   gap: 1rem;
   margin: 1.5rem 0rem;
 
+  @include desktop {
+    margin-bottom: 0rem;
+  }
+
   &__label {
     @include flex-orientation(column);
     color: $slate700;
     font-size: 0.8rem;
     font-weight: 500;
-    // margin-bottom: 0.5rem;
   }
 
   &__type-container {
@@ -117,6 +120,11 @@
     }
     &:hover::after {
       opacity: 1;
+    }
+
+    @include desktop {
+      width: 50%;
+      margin-left: 0px;
     }
   }
 

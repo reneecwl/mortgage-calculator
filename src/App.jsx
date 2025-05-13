@@ -41,8 +41,9 @@ function App() {
   };
 
   return (
-    <>
-      <main className="main">
+    <main className="main">
+      <div className="main__container">
+        {/* <div className="content__container"> */}
         <div className="form__container">
           <div>
             <h3 className="title"> Mortgage Calculator</h3>
@@ -66,8 +67,9 @@ function App() {
           />
         </div>
         <Result monthlyPayment={monthlyPayment} year={year} interestPayment={interestPayment} />
-      </main>
-    </>
+        {/* </div>{" "} */}
+      </div>
+    </main>
   );
 }
 
