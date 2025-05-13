@@ -1,5 +1,5 @@
 import "./styles/partials/_global.scss";
-import "./app.scss";
+import "./App.scss";
 import { useState } from "react";
 import Form from "./components/Form/Form";
 import Result from "./components/Result/Result";
