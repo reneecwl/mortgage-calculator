@@ -17,6 +17,20 @@
     font-weight: 500;
   }
 
+  &__middle-container {
+    @include flex-orientation(column);
+    gap: 1rem;
+    @include desktop {
+      @include flex-orientation(row);
+      justify-content: space-between;
+    }
+  }
+  &__label-half {
+    @include desktop {
+      width: 45%;
+    }
+  }
+
   &__type-container {
     @include flex-orientation(column);
 
@@ -178,6 +192,10 @@
     border-bottom-right-radius: 5px;
     font-size: 1.05rem;
     font-weight: bold;
+
+    @include desktop {
+      width: 25%;
+    }
   }
   &__input {
     border: none;
@@ -204,6 +222,10 @@
     border-bottom-right-radius: 5px;
     font-size: 1.05rem;
     font-weight: bold;
+
+    @include desktop {
+      width: 17%;
+    }
   }
   &__input {
     border: none;

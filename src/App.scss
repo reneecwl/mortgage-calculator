@@ -3,9 +3,11 @@
 
 .main {
   @include desktop {
-    background-color: $slate300;
+    background-color: $slate100;
     display: flex;
     align-items: center;
+    width: 100%;
+    min-height: 100vh;
   }
   &__container {
     @include flex-orientation(column);

@@ -39,48 +39,48 @@ export default function Form({
             />
           </div>
         </label>
+        <div className="form__middle-container">
+          <label className="form__label form__label-half">
+            Mortgage Term
+            <div className="year__container">
+              <input
+                type="number"
+                name="year"
+                id="year"
+                className="year__input"
+                onChange={(event) => {
+                  setYear(event.target.value);
+                }}
+                value={year}
+                // onBlur={() => {
+                //   setIsTouched(true);
+                // }}
+              />
+              <span className="year__unit">years</span>
+            </div>
+          </label>
 
-        <label className="form__label">
-          Mortgage Term
-          <div className="year__container">
-            <input
-              type="number"
-              name="year"
-              id="year"
-              className="year__input"
-              onChange={(event) => {
-                setYear(event.target.value);
-              }}
-              value={year}
-              // onBlur={() => {
-              //   setIsTouched(true);
-              // }}
-            />
-            <span className="year__unit">years</span>
-          </div>
-        </label>
-
-        <label className="form__label">
-          Interest Rate
-          <div className="interest__container">
-            <input
-              type="number"
-              name="interest"
-              id="interest"
-              className="interest__input"
-              step="0.01"
-              onChange={(event) => {
-                setInterest(event.target.value);
-              }}
-              value={interest}
-              // onBlur={() => {
-              //   setIsTouched(true);
-              // }}
-            />{" "}
-            <span className="interest__unit">%</span>
-          </div>{" "}
-        </label>
-
+          <label className="form__label form__label-half">
+            Interest Rate
+            <div className="interest__container">
+              <input
+                type="number"
+                name="interest"
+                id="interest"
+                className="interest__input"
+                step="0.01"
+                onChange={(event) => {
+                  setInterest(event.target.value);
+                }}
+                value={interest}
+                // onBlur={() => {
+                //   setIsTouched(true);
+                // }}
+              />{" "}
+              <span className="interest__unit">%</span>
+            </div>{" "}
+          </label>
+        </div>
         <div className="form__type-container">
           <h3 className="form__label">Mortgage Type</h3>
 
