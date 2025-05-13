@@ -113,11 +113,11 @@ export default function Form({
               name="type"
               id="interest-only"
               value="Interest Only"
-              checked={selectedOption === "Interest Only"}
               onChange={(event) => {
                 console.log("Clicked:", event.target.value);
                 setSelectedOption(event.target.value);
               }}
+              checked={selectedOption === "Interest Only"}
               className="form__radio"
             />
             <label htmlFor="interest-only" className="form__radio-label">
